@@ -1,0 +1,13 @@
+FROM node:9.2.0-alpine
+WORKDIR /user/src/appTest/
+
+# We copy the package.json in the "app" folder
+COPY ./myplatform/package.json /user/src/appTest/
+COPY ./myplatform/tests  /user/src/appTest/
+
+ENV NODE_ENV dev
+
+RUN npm update && \
+    npm install -g mocha
+
+CMD ["mocha", "/user/src/appTest/myfeature.js", "--reporter", "spec"]
