@@ -46,4 +46,10 @@ node3:
   restart: always
   ports:
     - "8080"
+redis:
+  image: "redis:3.2.11-alpine"
+  restart: always
+  container_name: redis_1
+  ports:
+    - "6379"
 #Mongo container
