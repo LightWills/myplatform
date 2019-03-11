@@ -1,5 +1,5 @@
 # myplatform
-README
+README test
 ### Install
 
 For running the tests with mocha
